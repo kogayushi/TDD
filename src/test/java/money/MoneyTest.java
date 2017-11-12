@@ -1,4 +1,4 @@
-package com.example.tdd;
+package money;
 
 import org.junit.Test;
 

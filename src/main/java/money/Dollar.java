@@ -1,4 +1,4 @@
-package com.example.tdd;
+package money;
 
 public class Dollar {
     public int amount;
