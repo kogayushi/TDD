@@ -13,7 +13,7 @@ abstract class Money {
     }
 
     static Money dollar(int amount) {
-        return new Dollar(amount);
+        return new Dollar(amount, "USD");
     }
     static Franc franc(int amount) {
         return new Franc(amount, "CHF");
