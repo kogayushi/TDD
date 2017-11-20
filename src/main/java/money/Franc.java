@@ -1,9 +1,9 @@
 package money;
 
 public class Franc extends Money {
-    public Franc(int amount) {
+    public Franc(int amount, String currency) {
         this.amount = amount;
-        currency = "CHF";
+        this.currency = "CHF";
     }
 
 
