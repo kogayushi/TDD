@@ -25,4 +25,10 @@ class Money {
         return new Franc(amount, "CHF");
     }
 
+    @Override
+    public String toString() {
+        return amount + " " + currency;
+
+    }
+
 }
