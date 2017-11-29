@@ -2,6 +2,8 @@ package money;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class MoneyTest {
@@ -64,5 +66,10 @@ public class MoneyTest {
         bank.addRate("CHF", "USD", 2);
         Money result = bank.reduce(Money.franc(2), "USD");
         assertEquals(Money.dollar(1), result);
+    }
+
+    @Test
+    public void testArrayEquals() {
+        assertTrue(new Object[]{"abc"}.equals(new Object[]{"abc"}));
     }
 }
