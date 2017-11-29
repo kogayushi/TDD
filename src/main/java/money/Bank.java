@@ -6,6 +6,6 @@ public class Bank {
     }
 
     void addRate(String from, String to, int rate) {
-        
+
     }
 }
