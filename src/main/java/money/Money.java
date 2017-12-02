@@ -13,7 +13,7 @@ class Money implements Expression {
         return new Money(this.amount * multiplier, this.currency);
     }
 
-    Expression plus(Money addend) {
+    Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
 
