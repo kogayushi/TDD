@@ -19,7 +19,7 @@ class Money implements Expression {
 
     public Money reduce(Bank bank, String to) {
         int rate = bank.rate(currency, to);
-        return new Money(amount /rate, to);
+        return new Money(amount / rate, to);
     }
 
     String currency() {
@@ -31,6 +31,11 @@ class Money implements Expression {
         return amount == money.amount && currency().equals(money.currency());
     }
 
+    @Override
+    public String toString() {
+        return amount + " " + currency;
+    }
+
     static Money dollar(int amount) {
         return new Money(amount, "USD");
     }
@@ -38,11 +43,4 @@ class Money implements Expression {
     static Money franc(int amount) {
         return new Money(amount, "CHF");
     }
-
-    @Override
-    public String toString() {
-        return amount + " " + currency;
-
-    }
-
 }
