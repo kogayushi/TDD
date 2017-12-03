@@ -2,8 +2,6 @@ package money;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class MoneyTest {
@@ -105,4 +103,9 @@ public class MoneyTest {
         assertEquals(Money.dollar(20), result);
     }
 
+    @Test
+    public void testPlusSameCurrencyReturnsMoney() {
+        Expression sum = Money.dollar(1).plus(Money.dollar(1));
+        assertTrue(sum instanceof Money);
+    }
 }
